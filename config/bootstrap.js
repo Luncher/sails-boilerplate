@@ -10,8 +10,10 @@
  */
 
 module.exports.bootstrap = function(cb) {
+  global.VError = require('verror')
+  global.ERROR_CODES = sails.config.app.ERROR_CODES
+  global.ERROR_PAYLOADS = sails.config.app.ERROR_PAYLOADS
+  sails.Error = UtilService.createError
+  cb()
+}
 
-  // It's very important to trigger this callback method when you are finished
-  // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
-  cb();
-};

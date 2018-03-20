@@ -6,9 +6,12 @@
   "keywords": [],
   "dependencies": {
     "include-all": "^1.0.0",
+    "joi": "^13.1.2",
     "rc": "1.0.1",
     "sails": "~0.12.14",
-    "sails-disk": "~0.10.9"
+    "sails-disk": "~0.10.9",
+    "skipper": "^0.7.6",
+    "verror": "^1.10.0"
   },
   "scripts": {
     "debug": "node debug app.js",
