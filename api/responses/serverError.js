@@ -18,10 +18,10 @@ module.exports = function serverError (data, options) {
     res.json({ code: info.code, message, data: info.data || {} })
   } else if (data instanceof Error) {
     res.status(500)
-    res.json({ code: -1, message: data.message, data: {} })
+    res.json({ code: ERROR_CODES.ERR_FAILURE, message: data.message, data: {} })
   } else {
     res.status(data.status || 500)
-    res.json({ code: -1, message: data.message, data: {} })
+    res.json({ code: ERROR_CODES.ERR_FAILURE, message: data.message, data: {} })
   }
 
   return
