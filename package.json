@@ -10,12 +10,13 @@
     "rc": "1.0.1",
     "sails": "~0.12.14",
     "sails-disk": "~0.10.9",
-    "skipper": "^0.7.6",
+    "skipper": "for-sails-0.12",
     "verror": "^1.10.0"
   },
   "scripts": {
     "debug": "node debug app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
@@ -23,5 +24,12 @@
     "url": "git://github.com/ytx/mini-program.git"
   },
   "author": "ytx",
-  "license": ""
+  "license": "",
+  "devDependencies": {
+    "eventproxy": "^1.0.0",
+    "mocha": "^5.0.4",
+    "power-assert": "^1.4.4",
+    "sinon": "^4.4.6",
+    "supertest": "^3.0.0"
+  }
 }
