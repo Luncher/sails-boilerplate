@@ -16,7 +16,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "lint": "eslint --ignore-path .gitignore . --quiet --ext .js --fix",
+    "lint": "eslint --ignore-path .gitignore . --quiet --ext .js",
     "test": "node ./node_modules/mocha/bin/mocha test/bootstrap.test.js test/integration/**/*.test.js"
   },
   "main": "app.js",
