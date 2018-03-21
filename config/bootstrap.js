@@ -9,11 +9,10 @@
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.bootstrap.html
  */
 
-module.exports.bootstrap = function(cb) {
+module.exports.bootstrap = function (cb) {
   global.VError = require('verror')
   global.ERROR_CODES = sails.config.app.ERROR_CODES
   global.ERROR_PAYLOADS = sails.config.app.ERROR_PAYLOADS
   sails.Error = UtilService.createError
   cb()
 }
-

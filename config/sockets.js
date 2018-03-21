@@ -11,8 +11,6 @@
  */
 
 module.exports.sockets = {
-
-
   /***************************************************************************
   *                                                                          *
   * Node.js (and consequently Sails.js) apps scale horizontally. It's a      *
@@ -50,9 +48,7 @@ module.exports.sockets = {
   // db: 0,
   // pass: '<redis auth password>',
 
-
-
- /***************************************************************************
+  /***************************************************************************
   *                                                                          *
   * Whether to expose a 'get /__getcookie' route with CORS support that sets *
   * a cookie (this is used by the sails.io.js socket client to get access to *
@@ -66,8 +62,6 @@ module.exports.sockets = {
   ***************************************************************************/
 
   // grant3rdPartyCookie: true,
-
-
 
   /***************************************************************************
   *                                                                          *
@@ -113,7 +107,6 @@ module.exports.sockets = {
   //   // (`false` would reject the connection)
   // },
 
-
   /***************************************************************************
   *                                                                          *
   * `afterDisconnect`                                                        *
@@ -138,4 +131,4 @@ module.exports.sockets = {
   ***************************************************************************/
   // transports: ["polling", "websocket"]
 
-};
+}

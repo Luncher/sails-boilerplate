@@ -6,6 +6,7 @@
     "grunt": false,
     "pubsub": false,
     "sockets": false,
-    "i18n": false
+    "i18n": false,
+    "views": false
   }
 }

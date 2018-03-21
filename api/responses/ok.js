@@ -14,7 +14,7 @@ module.exports = function sendOK (data, options) {
   }
 
   const result = {}
-  if (data.code == 0 || !data.code) {
+  if (data.code === 0 || !data.code) {
     result.code = ERROR_CODES.ERR_OK
     result.message = ERROR_PAYLOADS[ERROR_CODES.ERR_OK].message
   } else {
@@ -24,7 +24,7 @@ module.exports = function sendOK (data, options) {
   result.data = data.data || data
   res.status(data.status ? data.status : 200)
 
-  sails.log.info(`${req.method} ${req.url} Result: ${util.inspect(result)}`);
+  sails.log.info(`${req.method} ${req.url} Result: ${util.inspect(result)}`)
 
   return res.json(result)
 }

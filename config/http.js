@@ -49,7 +49,6 @@ module.exports.http = {
     ],
 
     bodyParser: require('skipper')({strict: true}),
-    
     requestLogger: function (req, res, next) {
       sails.log.info('Requested :: ', req.method, req.url)
       return next()

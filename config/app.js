@@ -2,7 +2,7 @@ module.exports.app = {
   ERROR_CODES: {
     ERR_OK: 0,
     ERR_FAILURE: 8000,
-    ERR_INVALID_PARAMS: 8008,
+    ERR_INVALID_PARAMS: 8008
   },
   ERROR_PAYLOADS: {
     0: {
@@ -18,7 +18,7 @@ module.exports.app = {
     8008: {
       name: 'ERR_INVALID_PARAMS',
       message: '无效的参数',
-      status: 400, 
+      status: 400
     }
   }
 }
