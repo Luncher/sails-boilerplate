@@ -16,12 +16,12 @@ module.exports = function serverError (data, options) {
     const message = info.message + ':' + (cause ? cause.message : "" )
     res.status(info.status)
     res.json({ code: info.code, message, data: info.data || {} })
-  } else if (data instanceof Error) {
-    res.status(500)
-    res.json({ code: ERROR_CODES.ERR_FAILURE, message: data.message, data: {} })
   } else {
-    res.status(data.status || 500)
-    res.json({ code: ERROR_CODES.ERR_FAILURE, message: data.message, data: {} })
+    const code = ERROR_CODES.ERR_FAILURE
+    const status = ERROR_PAYLOADS[code].status || 500
+    const message = data.message || ERROR_PAYLOADS[code].message
+    res.status(status)
+    res.json({ code, message, data: {} })
   }
 
   return
