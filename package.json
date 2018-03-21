@@ -9,7 +9,6 @@
     "joi": "^13.1.2",
     "rc": "1.0.1",
     "sails": "~0.12.14",
-    "sails-disk": "~0.10.9",
     "skipper": "for-sails-0.12",
     "verror": "^1.10.0"
   },
